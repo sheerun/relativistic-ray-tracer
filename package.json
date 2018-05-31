@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "parcel --no-hmr index.html",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "parcel build && cp now.json dist && cd dist && now --public"
   }
 }
