@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Relativistic Ray Tracer in browser</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+        <style>
+          .menu > div + div {
+            margin-left: 10px;
+          }
+        </style>
+    </head>
+    <body>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; width: 100vw">
+        <h1 class="title">Relativistic Ray Tracer (<a href="https://github.com/sheerun/relativistic-ray-tracer">source</a>)</h1>
+        <canvas id="renderCanvas" style="width: 800px; height: 450px;"></canvas>
+        <div style="margin-top: 10px; display: flex;" class="menu">
+          <div>
+            <label class="label">Size:</label>
+            <input id="scale" class="input is-inline" type="text" value="2" style="width: 50px">
+          </div>
+          <div>
+            <label class="label">FPS:</label>
+            <input id="fps" class="input is-inline" type="text" value="30" style="width: 50px">
+          </div>
+          <div>
+            <label class="label">Velocity (xyz):</label>
+            <input id="betax" class="input is-inline" type="text" value="0.7" style="width: 50px">
+            <input id="betay" class="input is-inline" type="text" value="0" style="width: 50px">
+            <input id="betaz" class="input is-inline" type="text" value="0" style="width: 50px">
+          </div>
+          <div>
+            <label class="label">Start (txyz):</label>
+            <input id="offsett" class="input is-inline" type="text" value="400" style="width: 50px">
+            <input id="offsetx" class="input is-inline" type="text" value="0" style="width: 50px">
+            <input id="offsety" class="input is-inline" type="text" value="0" style="width: 50px">
+            <input id="offsetz" class="input is-inline" type="text" value="100" style="width: 50px">
+          </div>
+          <div>
+            <label class="label">Object:</label>
+            <div class="select">
+              <select id="type">
+                <option value="sphere">Sphere</option>
+                <option value="cube">Cube</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="label">&nbsp;</label>
+            <button id="render" class="button">Render!</button>
+          </div>
+        </div>
+        <div style="margin-top: 20px;">
+          Created by <a href="https://github.com/lucy-zhang">Lucy Zhang</a>. Ported to JavaScript by <a href="https://github.com/sheerun">Adam Stankiewicz</a>
+        </div>
+      </div>
+      <script src="./browser.js"></script>
+    </body>
+</html>
+

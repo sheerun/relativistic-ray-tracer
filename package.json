@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "dependencies": {
+    "canvas": "^1.6.11",
+    "leftpad": "^0.0.1"
+  },
+  "devDependencies": {
+    "jest": "^23.1.0"
+  },
+  "scripts": {
+    "start": "parcel --no-hmr index.html",
+    "test": "jest"
+  }
+}
